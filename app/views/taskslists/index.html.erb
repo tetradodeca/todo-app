@@ -1,0 +1,12 @@
+<%= link_to 'New Task', new_taskslist_path %>
+<br><br>
+
+<% @taskslist.each do |post| %>
+<br><br>
+<%= post.title %><br>
+<%= post.description %><br>
+<%= link_to "Subtasks", taskslist_path(id: post.id) %>
+<%= link_to "Delete Task", taskslist_path(id: post.id), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<br>
+<% end %>

@@ -1,0 +1,6 @@
+<h2> <%= @taskslist.title %> </h2>
+
+<p> <%= @taskslist.description %> </p>
+<br>
+
+<%= link_to "Edit Task", edit_taskslist_path(id: @taskslist.id) %>
