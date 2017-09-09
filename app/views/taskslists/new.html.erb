@@ -1,11 +1,14 @@
+<%= link_to "Back to Home", taskslists_path %><br>
+
 <h1>New</h1>
+
 
 <%= form_for @taskslist, url: taskslists_path, method: :post do |f| %>
 
     <%= f.label :title %><br>
     <%= f.text_field :title %><br>
     <br>
-    <%= f.label :description %><br>
+    <%= f.label :Task_description %><br>
     <%= f.text_area :description %><br>
     <br>
     <%= f.submit %>

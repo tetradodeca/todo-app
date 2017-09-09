@@ -11,8 +11,10 @@ end
 def create
     @taskslist = Taskslist.new(task_params)
     if @taskslist.save
-        redirect_to taskslists_path
+        flash[:notice] = "New Task Created!"
+        redirect_to taskslist_path(id: @taskslist.id)
     else
+        flash.now[:notice] = "Fields cannot be blank!"
         render :new
     end
 end

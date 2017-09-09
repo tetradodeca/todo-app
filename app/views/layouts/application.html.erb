@@ -9,7 +9,13 @@
   </head>
 
   <body>
-  <%= link_to 'Home', taskslists_path %>
+  
+
+  <% flash.class %>
+  <%-flash.each do |key,value| %>
+  <% key %>
+  <h3><%= value %></h3>
+  <% end %>
     <%= yield %>
   </body>
 </html>

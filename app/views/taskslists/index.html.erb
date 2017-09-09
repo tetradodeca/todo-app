@@ -3,9 +3,9 @@
 
 <% @taskslist.each do |post| %>
 <br><br>
-<%= post.title %><br>
+<h2><%= post.title %></h2><br>
 <%= post.description %><br>
-<%= link_to "Subtasks", taskslist_path(id: post.id) %>
+<%= link_to "View Subtasks", taskslist_path(id: post.id) %>
 <%= link_to "Delete Task", taskslist_path(id: post.id), method: :delete, data: { confirm: "Are you sure?" } %>
 
 <br>
