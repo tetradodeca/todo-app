@@ -5,4 +5,17 @@
 <p> <%= @taskslist.description %> </p>
 <br>
 
-<%= link_to "Edit Task", edit_taskslist_path(id: @taskslist.id) %>
+<%= link_to "Edit Task", edit_taskslist_path(id: @taskslist.id) %><br><br>
+
+
+<% @taskslist.todos.order(created_at: :desc).each do |comment| %>
+
+    
+    <p> <%= comment.list %> </p><br>
+<% end %>
+
+
+
+
+
+    

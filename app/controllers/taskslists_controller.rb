@@ -21,6 +21,7 @@ end
 
 def show
     @taskslist = Taskslist.find(params[:id])
+    @todo = @taskslist.todos.build
 end
 
 def edit
