@@ -1,5 +1,3 @@
-<%= link_to "Back to Home", taskslists_path %>
-
 <h2> <%= @taskslist.title %> </h2>
 
 <p> <%= @taskslist.description %> </p>
@@ -10,8 +8,10 @@
 
 <% @taskslist.todos.order(created_at: :desc).each do |comment| %>
 
-    
-    <p> <%= comment.list %> </p><br>
+    <ul>
+    <li><p><h3> <%= comment.list %> </h3> </p></li>
+
+    </ul>
 <% end %>
 
 
@@ -19,3 +19,11 @@
 
 
     
+
+
+
+
+
+
+
+

@@ -1,6 +1,4 @@
-<%= link_to "Back to Home", taskslists_path %><br>
-
-<h1>New</h1>
+<h1>Create A New Task!</h1>
 
 
 <%= form_for @taskslist, url: taskslists_path, method: :post do |f| %>
@@ -13,3 +11,6 @@
     <br>
     <%= f.submit %>
     <% end %>
+
+
+    
