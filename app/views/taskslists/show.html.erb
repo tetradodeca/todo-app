@@ -1,7 +1,6 @@
 <h2> <%= @taskslist.title %> </h2>
 
 <p> <%= @taskslist.description %> </p>
-<br>
 
 <%= link_to "Edit Task", edit_taskslist_path(id: @taskslist.id) %><br><br>
 
@@ -12,8 +11,22 @@
     <li><p><h3> <%= comment.list %> </h3> </p></li>
 
     </ul>
+    <%= link_to "Edit Listing", edit_taskslist_todo_path(taskslist_id: @taskslist.id, id: comment.id) %>
+    <%= link_to "Delete Listing", taskslist_todo_path(taskslist_id: @taskslist.id, id: comment.id), method: :delete, data: { confirm: "Are you sure?" } %><br><br>
 <% end %>
 
+
+
+
+
+<%= form_for @todo, url: taskslist_todos_path(taskslist_id: @taskslist.id), method: :post do |f| %>
+
+    <%= f.label :Add_Substask %>
+    <%= f.text_field :list %>
+
+    <%= f.submit %>
+
+    <% end %>
 
 
 

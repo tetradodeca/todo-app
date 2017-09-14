@@ -1,8 +1,0 @@
-<%= form_for @todo, url: taskslist_todos_path(post_id: @taskslist.id),method: :post do |f| %>
-
-    <%= f.label :Add_Substask %>
-    <%= f.text_area :list %>
-
-    <%= f.submit 'commment' %>
-
-    <% end %>

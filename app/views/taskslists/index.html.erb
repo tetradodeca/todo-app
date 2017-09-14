@@ -1,8 +1,8 @@
-<table class="table">
+
 <% @taskslist.each do |post| %>
 <tr><h2><%= link_to post.title, post %></h2><br>
 <%= post.description %><br></tr>
-</table>
+
 
 <%= link_to "Delete Task", taskslist_path(id: post.id), method: :delete, data: { confirm: "Are you sure?" } %>
 
